@@ -26,5 +26,5 @@ def buildHolmes(tag):
 
 
 def deployHolmes(tag, env):
-     comando = f"nebula exec deploy --service cfa-holmes --service-tag {tag} --config-tag {tag} --cluster jupiter --follow --environment {env}"
+     comando = f"nebulactl exec deploy --service cfa-holmes --service-tag {tag} --config-tag {tag} --cluster jupiter --follow --environment {env}"
      run_bash_command(comando)
