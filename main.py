@@ -1,5 +1,5 @@
 from menus.menu_principal import menu_principal
-from commands.comandos_especificos import buildGateways, buildJmidas, deployGateways, deployJmidas
+from commands.comandos_especificos import buildGateways, buildJmidas, buildHolmes,  deployGateways, deployJmidas, deployHolmes
 import argparse
 
 def parse_args():
@@ -25,7 +25,11 @@ def execute_command(args):
         "cfa-jmidas": {
             "build": buildJmidas,
             "deploy": deployJmidas
-        }
+        },
+        "cfa-holmes": {
+            "build": buildHolmes,
+            "deploy": deployHolmes
+        },
     }
 
     if args.build:
