@@ -1,5 +1,5 @@
-from menu import menu_principal
-from commands import buildGateways, deployGateways, buildJmidas, deployJmidas
+from menus.menu_principal import menu_principal
+from commands.comandos_especificos import buildGateways, buildJmidas, deployGateways, deployJmidas
 import argparse
 
 def parse_args():
