@@ -22,9 +22,7 @@ def deployar():
     run_bash_command(comando)
 
 def criarAcg():
-    
     path = get_input("Informe o caminho completo incluindo o arquivo .yml: ")
-    
     comando = f"nebulactl create access-control-group --path {path}"
     run_bash_command(comando)
     

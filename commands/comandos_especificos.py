@@ -1,4 +1,5 @@
 from bash_executor import run_bash_command
+import time
 
 def buildGateways(tag):
     comando = f"nebulactl exec build --service-tag {tag} --service cfa-ra-gateways --follow"
@@ -19,6 +20,8 @@ def deployJmidas(tag, env):
 
 def buildHolmes(tag):
      comando = f"nebulactl exec build --service-tag {tag} --service cfa-holmes --follow"
+     print("Comando gerado: " + comando)
+     time.sleep(3)
      run_bash_command(comando)
 
 

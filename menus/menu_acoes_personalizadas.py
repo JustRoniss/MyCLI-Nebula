@@ -1,4 +1,4 @@
-from commands.comandos_genericos import buildar, deployar
+from commands.comandos_genericos import buildar, deployar, criarAcg, criarDeploymentTemplate
 import os
 
 def menu_acoes_personalizadas():
@@ -6,7 +6,8 @@ def menu_acoes_personalizadas():
     print("Menu de ações personalizadas - Nebula")
     print("1) Realizar build")
     print("2) Realizar deploy")
-    print("3) Criar acg")
+    print("3) Criar Deployment Template")
+    print("4) Criar acg")
     print("0) Sair")
     print()
 
@@ -17,7 +18,9 @@ def menu_acoes_personalizadas():
     elif escolha == '2':
         deployar()
     elif escolha == '3':
-        print("Em desenvolvimento")    
+        criarDeploymentTemplate()  
+    elif escolha == '4':
+        criarAcg()
     elif escolha == '0':
         exit()
     else:
